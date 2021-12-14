@@ -1,0 +1,73 @@
+Objective:
+   Add support for Big Integers (numbers greater than 18446744073709551615) in C along
+   with basic mathematical operations and functions.
+
+Step-1 :
+    Declare character arrays which are the data structure to be used to present INTALs and
+    initialize elements to 0.
+    • Assume all INTALs are at most 1000 digits long, hence using malloc function,
+      declare a 1001 element character array. The 1 extra element will be for the null character \0.
+    • To avoid computing with garbage values, initialize all elements of the declared INTAL to 0.
+    • Create a single function which returns 1001 digit INTAL initialized with zeros.
+      This will be useful later on when trying to instantly create an INTAL.
+
+Step-2 :
+    A function that compares two INTALs.
+    • A function that accepts two INTALs as function parameters and returns 0 or -1 or
+      1 if both INTALs are equal or the first INTAL is lesser than the second INTAL or second
+      INTAL is lesser than the first INTAL respectively.
+    • The function runs in O(n) time (complexity), where n is the number of digits in
+      INTAL or the number of characters in the array.
+    • INTALs passed to the comparator may also be of unequal length.
+
+Step-3 :
+    A function that adds two INTALs and returns their sum.
+    • A function that accepts two INTALs as function parameters and returns the sum of both INTALs.
+    • The function runs in O(n) time, where n is the number of digits in INTAL or the
+      number of characters in the array.
+    • INTALs passed to the adder may also be of unequal length.
+    • The fuction uses the same concept of elementary mathematical addition for adding the INTALs.
+
+Step-4 :
+    A function that subtracts two INTALs and returns their difference.
+    • A function that accepts two INTALs as function parameters and returns the difference.
+    • The smaller INTAL always be subtracted from the larger INTAL; so that the result
+      INTAL is always greater than or equal to zero.
+    • The function runs in O(n) time, where n is the number of digits in INTAL or the
+      number of characters in the array.
+    • The fuction uses the same concept of elementary mathematical subtraction.
+    • The result INTAL not containing any preceding zeros in the result unless the result is
+      zero in which case the INTAL can contain only 1 zero.
+
+Step-5 :
+    A function that multiplies two INTALs and returns their product.
+    • INTALs support a maximum of 1000 digits, the sum of digits of both multipliers must not exceed 1000.
+    • A function that accepts two INTALs as function parameters and returns the product.
+    • In case either of the INTALs is zero, return zero.
+    • In case either of the INTALs is 1, return the other INTAL.
+    • The function runs in O(n2) time, where n is the number of digits in INTAL.
+
+Step-6 :
+    A function that divide INTAL to long int and return quotient & remainder.
+    • In case dividend is zero, return zero.
+    • Divisor must be greater than zero, as division by zero is not possible.
+    • The function runs in O(n) time, where n is the number of digits in INTAL or the
+      number of characters in the array.
+    • The result INTAL not contain any preceding zeros in the result unless the result is
+      zero in which case the INTAL can contain only 1 zero.
+
+Step-7 :
+    A function that returns the nth Fibonacci INTAL.
+    • A function to take an unsigned int n as a parameter and return the nth Fibonacci INTAL.
+    • Refer to the algorithm to compute the nth Fibonacci number. The only additional logic
+      is required to deal with INTALs.
+    • Have 2 INTALs initialized to Zero and One respectively.
+    • Until n terms are generated, keep adding the previous 2 Fibonacci terms as is with the
+      Fibonacci algorithm
+
+Step-8 :
+    A function that returns the factorial of that number.
+    • A function to take an unsigned int n as a parameter and return the factorial
+      represented as an INTAL.
+    • The concept of the factorial of a number remains unchanged.
+    
